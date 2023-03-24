@@ -1,0 +1,55 @@
+# Environment Variables
+@BASE_URL = http://localhost:8000
+
+### this is root route.
+
+GET {{BASE_URL}}
+
+### this is 'SIGNUP' route
+
+POST {{BASE_URL}}/signup
+Content-Type: application/json
+
+{
+    "name": "test",
+    "email": "test@gmail.com",
+    "password": "pass123",
+    "address": "testAdress"
+
+}
+
+### this is 'LOGIN' route
+
+POST {{BASE_URL}}/login 
+Content-Type: application/json
+
+{
+    "email": "test@gmail.com",
+    "password": "pass123"
+}
+
+### this is 'DELETEUSER' route
+DELETE {{BASE_URL}}/deleteuser
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDAzNWZiZGRmNGMwMjI2NTAwMTZlODIiLCJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRVVGRIMzlrUjV6T2IvalpDN2xwMkR1ZmhxcmJKZzN2dko4Ny5iVXFSZXBoaVp3eXVVY0Z1NiIsImFkZHJlc3MiOiJ0ZXN0QWRyZXNzIiwiX192IjowLCJpYXQiOjE2Nzc5NDI3NTB9.hnvgChG6NLSbcBk8fictfJq3FPHuntK81mZSJEBAvOM
+
+### this is 'UPDATE_NAME' route
+
+PATCH {{BASE_URL}}/updatename
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDAzMmRmODQwMjM1OTFkZGQyMDdmNzQiLCJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRsbmQ3aVA5ZkwyYWxTckdweDVMaWwuaUJ4TWVSUi5DSnlXY3RTelRtdjVXd0g3Z2wwYnJBYSIsImFkZHJlc3MiOiJ0ZXN0QWRyZXNzIiwiX192IjowLCJpYXQiOjE2Nzc5Mjk5ODZ9.JEmOow77dfvgQYmh00MnQx4MGUZlB9LM48cPYClbNQU
+
+{
+    "name": "changed name"
+}
+
+
+### this is 'USERDETAILS' route
+
+GET {{BASE_URL}}/user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDAzMmRmODQwMjM1OTFkZGQyMDdmNzQiLCJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRsbmQ3aVA5ZkwyYWxTckdweDVMaWwuaUJ4TWVSUi5DSnlXY3RTelRtdjVXd0g3Z2wwYnJBYSIsImFkZHJlc3MiOiJ0ZXN0QWRyZXNzIiwiX192IjowLCJpYXQiOjE2Nzc5Mjk5ODZ9.JEmOow77dfvgQYmh00MnQx4MGUZlB9LM48cPYClbNQU
+
+
+
+### GET all user from this api
+
+GET {{BASE_URL}}/users
